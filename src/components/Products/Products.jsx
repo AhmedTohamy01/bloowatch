@@ -8,6 +8,7 @@ export const Proudcts = () => {
     <ProductsWrapper>
       {products.map((product) => (
         <ProductCard
+          key={product.id}
           name={product.name}
           category={product.category}
           price={product.price}
