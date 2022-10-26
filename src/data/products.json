@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "LIGTTWAVE BOARD",
     "image": "/images/product1.png",
     "category": "Equipment, Board",
@@ -9,6 +10,7 @@
     "discountPrice": "$200.00"
   },
   {
+    "id": 2,
     "name": "SCUBA DIVING WETSUIT",
     "image": "/images/product2.png",
     "category": "Equipment, Board",
@@ -18,6 +20,7 @@
     "discountPrice": null
   },
   {
+    "id": 3,
     "name": "Woman’s Wetsuit Pro",
     "image": "/images/product3.png",
     "category": "Equipment, Scubadiving",
@@ -27,6 +30,7 @@
     "discountPrice": null
   },
   {
+    "id": 4,
     "name": "Board Paddle Pair",
     "image": "/images/product4.png",
     "category": "Canoenig, Equipment",
@@ -36,6 +40,7 @@
     "discountPrice": null
   },
   {
+    "id": 5,
     "name": "Kayak With Paddles",
     "image": "/images/product5.png",
     "category": "Canoenig, Paddling",
@@ -45,6 +50,7 @@
     "discountPrice": null
   },
   {
+    "id": 6,
     "name": "LIGTTWAVE BOARD",
     "image": "/images/product6.png",
     "category": "Equipment, Board",
