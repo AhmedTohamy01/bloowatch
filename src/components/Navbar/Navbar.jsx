@@ -58,17 +58,23 @@ const Link = styled.div`
   /* border: 1px solid yellow; */
   margin-left: 100px;
   font-family: 'OpenSansSemibold';
+  font-size: 18px;
+  line-height: 24px;
   display: flex;
   align-items: center;
   cursor: pointer;
 
-  @media (max-width: 900px) {
+  @media (max-width: 990px) {
     margin-left: 50px;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     margin-left: 0px;
     margin-right: 30px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 16px;
   }
 `
 
