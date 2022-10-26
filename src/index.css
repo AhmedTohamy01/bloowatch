@@ -8,11 +8,16 @@
   src: url('../public/fonts/OpenSans-Semibold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'OpenSansbold';
+  src: url('../public/fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: OpenSansRegular, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: OpenSansRegular, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
