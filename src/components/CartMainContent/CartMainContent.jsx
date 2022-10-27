@@ -1,8 +1,8 @@
+import { useContext } from 'react'
+import { MainContext } from '../../context/MainContext'
 import styled from 'styled-components'
 import { ChevronUp, ChevronDown, X } from 'lucide-react'
 import { CartTotal } from '../CartTotal/CartTotal'
-import { useContext } from 'react'
-import { MainContext } from '../../context/MainContext'
 
 /*---> Component <---*/
 export const CartMainContent = () => {
@@ -112,21 +112,14 @@ export const CartMainContent = () => {
 
 /*---> Styles <---*/
 const MainWrapper = styled.div`
-  /* border: 1px solid red; */
-  /* height: 1000px; */
   padding: 10%;
 `
 
-const ProductsWrapper = styled.div`
-  /* border: 1px solid red; */
-`
+const ProductsWrapper = styled.div``
 
-const CartTotalWrapper = styled.div`
-  /* border: 1px solid red; */
-`
+const CartTotalWrapper = styled.div``
 
 const HeaderWrapper = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   margin-bottom: 20px;
 
@@ -136,7 +129,6 @@ const HeaderWrapper = styled.div`
 `
 
 const ProductDetailsDesktop = styled.div`
-  /* border: 1px solid red; */
   height: 150px;
   display: flex;
   align-items: center;
@@ -151,7 +143,6 @@ const Divider = styled.div`
 `
 
 const IconField = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -159,7 +150,6 @@ const IconField = styled.div`
 `
 
 const ProductField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -167,7 +157,6 @@ const ProductField = styled.div`
 `
 
 const PriceField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -175,7 +164,6 @@ const PriceField = styled.div`
 `
 
 const QuantityField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -185,14 +173,12 @@ const QuantityField = styled.div`
 `
 
 const SubtotalField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
 `
 
 const Quantity = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 14px;
   line-height: 19px;
@@ -201,19 +187,15 @@ const Quantity = styled.div`
 `
 
 const Conrtrols = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  /* margin-right: 25px; */
 `
 
 const ArrowIconUp = styled(ChevronUp)`
-  /* border: 1px solid red; */
   cursor: pointer;
 `
 
 const ArrowIconDown = styled(ChevronDown)`
-  /* border: 1px solid red; */
   cursor: pointer;
 `
 const ControlsDivider = styled.div`
@@ -222,7 +204,6 @@ const ControlsDivider = styled.div`
 `
 
 const ButtonsWrapper = styled.div`
-  /* border: 1px solid red; */
   padding: 50px 14%;
   display: flex;
 
@@ -233,7 +214,6 @@ const ButtonsWrapper = styled.div`
 `
 
 const CartButton = styled.div`
-  /* border: 1px solid red; */
   width: 200px;
   height: 50px;
   background: #0c0eb6;
@@ -249,13 +229,11 @@ const CartButton = styled.div`
 `
 
 const ProductImage = styled.img`
-  /* border: 1px solid red; */
   width: 35px;
   height: auto;
 `
 
 const ProductDetailsMobile = styled.div`
-  /* border: 1px solid red; */
   display: none;
 
   @media (max-width: 1024px) {
@@ -264,53 +242,44 @@ const ProductDetailsMobile = styled.div`
 `
 
 const MobileIconField = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  /* width: 50%; */
   justify-content: space-between;
 `
 
 const MobileProductField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 30px;
-  /* width: 50%; */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 `
 
 const MobilePriceField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 30px;
-  /* width: 50%; */
   display: flex;
   justify-content: space-between;
 `
 
 const MobileQuantityField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-  /* width: 50%; */
   display: flex;
   justify-content: space-between;
 `
 
 const MobileQuantity = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -321,12 +290,10 @@ const MobileQuantity = styled.div`
 `
 
 const MobileSubtotalField = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 30px;
-  /* width: 50%; */
   display: flex;
   justify-content: space-between;
 `

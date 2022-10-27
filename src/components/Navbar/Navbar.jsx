@@ -1,8 +1,8 @@
+import { useContext } from 'react'
+import { MainContext } from '../../context/MainContext'
 import styled from 'styled-components'
 import { ShoppingCart } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { MainContext } from '../../context/MainContext'
 
 /*---> Component <---*/
 export const Navbar = () => {
@@ -37,7 +37,6 @@ export const Navbar = () => {
 
 /*---> Styles <---*/
 const NavbarWrapper = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,25 +50,19 @@ const NavbarWrapper = styled.div`
 `
 
 const LogoWrapper = styled.div`
-  /* border: 1px solid green; */
-
   @media (max-width: 720px) {
     margin-bottom: 20px;
   }
 `
 
-const Logo = styled.img`
-  /* border: 1px solid yellow; */
-`
+const Logo = styled.img``
 
 const LinksWrapper = styled.div`
-  /* border: 1px solid green; */
   display: flex;
   align-items: center;
 `
 
 const NavLink = styled.div`
-  /* border: 1px solid yellow; */
   margin-left: 100px;
   font-family: 'OpenSansSemibold';
   font-size: 18px;
@@ -100,7 +93,6 @@ const NavLink = styled.div`
 `
 
 const CartIcon = styled(ShoppingCart)`
-  /* border: 1px solid yellow; */
   color: gray;
   width: 20px;
   height: 20px;
@@ -108,7 +100,6 @@ const CartIcon = styled(ShoppingCart)`
 `
 
 const CartItems = styled.div`
-  /* border: 1px solid green; */
   background: red;
   width: 22px;
   height: 22px;

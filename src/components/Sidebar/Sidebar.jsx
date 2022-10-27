@@ -78,7 +78,6 @@ export const Sidebar = () => {
 
 /*---> Styles <---*/
 const SidebarWrapper = styled.div`
-  /* border: 1px solid red; */
   width: 25%;
   margin-left: 10px;
   padding-top: 110px;
@@ -89,12 +88,10 @@ const SidebarWrapper = styled.div`
 `
 
 const Section = styled.div`
-  /* border: 1px solid red; */
   margin-bottom: 50px;
 `
 
 const Title = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansSemibold';
   font-size: 18px;
   line-height: 24px;
@@ -102,8 +99,6 @@ const Title = styled.div`
 `
 
 const SearchInput = styled.input`
-  /* border: 1px solid yellow; */
-  /* height: 64px; */
   width: 85%;
   background: #fafafa;
   padding: 22px 17px;
@@ -118,12 +113,10 @@ const SearchInput = styled.input`
 `
 
 const PriceFilterWrapper = styled.div`
-  /* border: 1px solid red; */
   height: 100px;
 `
 
 const Category = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansSemibold';
   font-size: 18px;
   line-height: 38px;
@@ -137,13 +130,11 @@ const Category = styled.div`
 `
 
 const ProductWrapper = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   margin-bottom: 10px;
 `
 
 const ImageWrapper = styled.div`
-  /* border: 1px solid red; */
   min-width: 90px;
   height: 115px;
   background: #fafafa;
@@ -154,39 +145,32 @@ const ImageWrapper = styled.div`
 `
 
 const Image = styled.img`
-  /* border: 1px solid red; */
   width: 40px;
   height: 90px;
 `
 
 const InfoWrapper = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
 `
 
 const ProductName = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 10px;
 `
 
-const Review = styled.div`
-  /* border: 1px solid red; */
-`
+const Review = styled.div``
 
 const EmptyStar = styled(Star)`
-  /* border: 1px solid red; */
   color: #e67e22;
   width: 20px;
   height: 20px;
 `
 
 const FilledStar = styled(Star)`
-  /* border: 1px solid red; */
   color: #e67e22;
   fill: #e67e22;
   width: 20px;
@@ -194,8 +178,6 @@ const FilledStar = styled(Star)`
 `
 
 const SideBarImage = styled.img`
-  /* border: 1px solid red; */
   width: 100%;
-  /* height: 245px; */
   margin-top: 40px;
 `

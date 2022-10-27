@@ -1,8 +1,8 @@
+import { useContext } from 'react'
+import { MainContext } from '../../context/MainContext'
 import styled from 'styled-components'
 import { ChevronUp, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
-import { useContext } from 'react'
-import { MainContext } from '../../context/MainContext'
 
 /*---> Component <---*/
 export const ProductMainContent = () => {
@@ -69,7 +69,6 @@ export const ProductMainContent = () => {
 
 /*---> Styles <---*/
 const MainWrapper = styled.div`
-  /* border: 1px solid yellow; */
   padding: 100px 12%;
   display: flex;
 
@@ -83,7 +82,6 @@ const MainWrapper = styled.div`
 `
 
 const ProductImagesWrapper = styled.div`
-  /* border: 1px solid green; */
   width: 50%;
   display: flex;
 
@@ -98,7 +96,6 @@ const ProductImagesWrapper = styled.div`
 `
 
 const ProductInfoWrapper = styled.div`
-  /* border: 1px solid red; */
   width: 50%;
   padding: 20px 60px;
 
@@ -115,7 +112,6 @@ const ProductInfoWrapper = styled.div`
 `
 
 const MainImageWrapper = styled.div`
-  /* border: 1px solid red; */
   width: 530px;
   height: 605px;
   background: #fafafa;
@@ -124,17 +120,13 @@ const MainImageWrapper = styled.div`
   align-items: center;
 `
 
-const MainImage = styled.img`
-  /* border: 1px solid red; */
-`
+const MainImage = styled.img``
 
 const SideImagesWrapper = styled.div`
-  /* border: 1px solid red; */
   margin-right: 40px;
 `
 
 const SideImageWrapper = styled.div`
-  /* border: 1px solid red; */
   width: 110px;
   height: 140px;
   background: #fafafa;
@@ -146,13 +138,11 @@ const SideImageWrapper = styled.div`
 `
 
 const SideImage = styled.img`
-  /* border: 1px solid red; */
   width: 53px;
   height: 115px;
 `
 
 const Name = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 24px;
@@ -160,19 +150,16 @@ const Name = styled.div`
 `
 
 const PriceWrapper = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 `
 
 const Price = styled.div`
-  /* border: 1px solid green; */
   font-size: 16px;
   line-height: 22px;
   color: white;
   background: #0c0eb7;
-  /* margin: auto; */
   width: 91px;
   height: 33px;
   display: flex;
@@ -181,10 +168,8 @@ const Price = styled.div`
 `
 
 const Discount = styled.div`
-  /* border: 1px solid green; */
   font-size: 16px;
   line-height: 22px;
-  /* margin: auto; */
   width: 91px;
   height: 33px;
   display: flex;
@@ -194,7 +179,6 @@ const Discount = styled.div`
 `
 
 const Desciption = styled.div`
-  /* border: 1px solid red; */
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 30px;
@@ -210,14 +194,12 @@ const Desciption = styled.div`
 `
 
 const ProductQuantityWrapper = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   margin-bottom: 80px;
 `
 
 const Quantity = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;
@@ -226,19 +208,16 @@ const Quantity = styled.div`
 `
 
 const Conrtrols = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   margin-right: 25px;
 `
 
 const ArrowIconUp = styled(ChevronUp)`
-  /* border: 1px solid red; */
   cursor: pointer;
 `
 
 const ArrowIconDown = styled(ChevronDown)`
-  /* border: 1px solid red; */
   cursor: pointer;
 `
 const Divider = styled.div`
@@ -260,7 +239,6 @@ const CartButton = styled.div`
 `
 
 const OtherInfo = styled.div`
-  /* border: 1px solid black; */
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 20px;
@@ -268,14 +246,4 @@ const OtherInfo = styled.div`
   span {
     font-weight: bold;
   }
-`
-
-const ProductDetailsWrapper = styled.div`
-  /* border: 1px solid red; */
-  width: 530px;
-  height: 605px;
-  background: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `

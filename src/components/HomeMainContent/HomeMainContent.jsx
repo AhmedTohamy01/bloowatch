@@ -14,7 +14,6 @@ export const HomeMainContent = () => {
 
 /*---> Styles <---*/
 const MainWrapper = styled.div`
-  /* border: 1px solid red; */
   padding: 100px 7%;
   display: flex;
 

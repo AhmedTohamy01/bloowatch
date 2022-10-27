@@ -44,7 +44,6 @@ export const Footer = () => {
 
 /*---> Styles <---*/
 const FooterWrapper = styled.div`
-  /* border: 1px solid red; */
   background: black;
   padding: 50px 70px 200px 70px;
   color: white;
@@ -61,12 +60,10 @@ const FooterWrapper = styled.div`
 `
 
 const AboutWrapper = styled.div`
-  /* border: 1px solid red; */
   margin-right: 5%;
 `
 
 const ContactWrapper = styled.div`
-  /* border: 1px solid red; */
   margin-right: 5%;
 
   @media (max-width: 900px) {
@@ -75,7 +72,6 @@ const ContactWrapper = styled.div`
 `
 
 const UsefulLinksWrapper = styled.div`
-  /* border: 1px solid red; */
   margin-right: 10%;
 
   @media (max-width: 1350px) {
@@ -88,21 +84,17 @@ const UsefulLinksWrapper = styled.div`
 `
 
 const InstagramWrapper = styled.div`
-  /* border: 1px solid red; */
-
   @media (max-width: 1260px) {
     margin-top: 30px;
   }
 `
 
 const Title = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 14px;
 `
 
 const AboutContent = styled.div`
-  /* border: 1px solid red; */
   width: 312px;
   margin-top: 45px;
   font-size: 13px;
@@ -113,27 +105,22 @@ const AboutContent = styled.div`
 `
 
 const Content = styled.div`
-  /* border: 1px solid red; */
   margin-top: 20px;
 `
 
 const Line = styled.div`
-  /* border: 1px solid red; */
   margin-bottom: 10px;
 `
 
 const Link = styled.div`
-  /* border: 1px solid red; */
   margin-bottom: 10px;
   cursor: pointer;
 `
 
 const ImagesWrapper = styled.div`
-  /* border: 1px solid red; */
   margin-top: 20px;
 `
 
 const Image = styled.img`
-  /* border: 1px solid red; */
   margin-right: 10px;
 `

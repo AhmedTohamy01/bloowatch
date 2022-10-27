@@ -31,8 +31,6 @@ export const CartTotal = ({ total }) => {
 
 /*---> Styles <---*/
 const CartTotalWrapper = styled.div`
-  /* border: 1px solid red; */
-  /* height: 1000px; */
   width: 50%;
   margin-top: 50px;
 
@@ -46,7 +44,6 @@ const CartTotalWrapper = styled.div`
 `
 
 const Title = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansbold';
   font-size: 32px;
   line-height: 43px;
@@ -54,13 +51,11 @@ const Title = styled.div`
 `
 
 const RowWrapper = styled.div`
-  /* border: 1px solid red; */
   padding: 20px 10px;
   display: flex;
 `
 
 const SubTitle = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;
@@ -72,7 +67,6 @@ const SubTitle = styled.div`
 `
 
 const Data = styled.div`
-  /* border: 1px solid red; */
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;
@@ -94,7 +88,6 @@ const Divider = styled.div`
 `
 
 const CheckoutButton = styled.div`
-  /* border: 1px solid #d8d8d8; */
   width: 270px;
   height: 50px;
   color: white;

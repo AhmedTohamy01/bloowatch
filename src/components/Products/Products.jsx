@@ -29,8 +29,6 @@ export const Proudcts = () => {
 
 /*---> Styles <---*/
 const ProductsWrapper = styled.div`
-  /* border: 1px solid yellow; */
-  /* height: 1000px; */
   padding: 50px 10px;
   display: flex;
   justify-content: center;
