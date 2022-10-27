@@ -1,36 +1,41 @@
 import styled from 'styled-components'
 import { ChevronUp, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
-import productInfo from '../../data/productInfo.json'
+import { useContext } from 'react'
+import { MainContext } from '../../context/MainContext'
 
 /*---> Component <---*/
 export const ProductMainContent = () => {
-  const [mainPhoto, setMainPhoto] = useState(productInfo.photos[0])
+  const { activeProduct, cartItems, setCartItems } = useContext(MainContext)
+  const [mainPhoto, setMainPhoto] = useState(activeProduct.imageURL)
   const [quantity, setQuantity] = useState(1)
+
+  if (!activeProduct.images)
+    return <>Loading ...(I know this, This can be handled later)</>
 
   return (
     <MainWrapper>
       <ProductImagesWrapper>
         <SideImagesWrapper>
-          {productInfo.photos.map((photo, index) => (
-            <SideImageWrapper onClick={() => setMainPhoto(photo)} key={index}>
-              <SideImage src={`./images/${photo}.png`} />
+          {activeProduct.images.map((image, index) => (
+            <SideImageWrapper onClick={() => setMainPhoto(image)} key={index}>
+              <SideImage src={image} />
             </SideImageWrapper>
           ))}
         </SideImagesWrapper>
         <MainImageWrapper>
-          <MainImage src={`./images/${mainPhoto}.png`} />
+          <MainImage src={mainPhoto} />
         </MainImageWrapper>
       </ProductImagesWrapper>
       <ProductInfoWrapper>
-        <Name>{productInfo.name}</Name>
+        <Name>{activeProduct.name}</Name>
         <PriceWrapper>
-          <Price>{productInfo.price}</Price>
-          {productInfo.hasDiscount && (
-            <Discount>{productInfo.discount}</Discount>
+          <Price>{activeProduct.price}</Price>
+          {activeProduct.hasDiscount && (
+            <Discount>{activeProduct.discountPrice}</Discount>
           )}
         </PriceWrapper>
-        <Desciption>{productInfo.description}</Desciption>
+        <Desciption>{activeProduct.description}</Desciption>
         <ProductQuantityWrapper>
           <Quantity>{quantity}</Quantity>
           <Conrtrols>
@@ -40,16 +45,22 @@ export const ProductMainContent = () => {
               onClick={() => (quantity > 1 ? setQuantity(quantity - 1) : null)}
             />
           </Conrtrols>
-          <CartButton>ADD TO CART</CartButton>
+          <CartButton
+            onClick={() =>
+              setCartItems([...cartItems, { quantity, item: activeProduct }])
+            }
+          >
+            ADD TO CART
+          </CartButton>
         </ProductQuantityWrapper>
         <OtherInfo>
-          <span>SKU:</span> {productInfo.sku}
+          <span>SKU:</span> {activeProduct.sku}
         </OtherInfo>
         <OtherInfo>
-          <span>CATEGORIES:</span> {productInfo.category}
+          <span>CATEGORIES:</span> {activeProduct.category}
         </OtherInfo>
         <OtherInfo>
-          <span>TAGS:</span> {productInfo.tag}
+          <span>TAGS:</span> {activeProduct.tag}
         </OtherInfo>
       </ProductInfoWrapper>
     </MainWrapper>
