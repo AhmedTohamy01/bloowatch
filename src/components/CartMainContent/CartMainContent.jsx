@@ -310,4 +310,6 @@ const CartEmptyState = styled.p`
   font-size: 48px;
   color: #959595;
   font-family: 'OpenSansSemibold';
+  padding: 20px;
+  text-align: center;
 `
