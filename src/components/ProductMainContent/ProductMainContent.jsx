@@ -10,7 +10,7 @@ export const ProductMainContent = () => {
   const [quantity, setQuantity] = useState(1)
 
   if (!activeProduct.images)
-    return <>Loading ...(I know this, This can be handled later)</>
+    return <>Loading ...(I know this issue, We can handle this but it need time, return back to home page)</>
 
   return (
     <MainWrapper>
