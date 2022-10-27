@@ -1,0 +1,115 @@
+[
+  {
+    "id": 1,
+    "name": "LIGTTWAVE BOARD",
+    "imageURL": "/images/product1.png",
+    "category": "Equipment, Board",
+    "price": 150,
+    "hasSale": true,
+    "hasDiscount": true,
+    "discountPrice": "$200.00",
+    "description": "Causae iudicat vitu perata mea ei, cum posse im pedit molestie ne, atqui viris simi lique ei vel. Per te illud an imal, vix ea sint con sul a pella tur iris itegre.",
+    "sku": "003",
+    "tag": "board, surf, suriging",
+    "images": [
+      "/images/product1.png", 
+      "/images/product3.png", 
+      "/images/product4.png", 
+      "/images/product5.png"]
+  },
+  {
+    "id": 2,
+    "name": "SCUBA DIVING WETSUIT",
+    "imageURL": "/images/product2.png",
+    "category": "Equipment, Board",
+    "price": 160,
+    "hasSale": true,
+    "hasDiscount": false,
+    "discountPrice": null,
+    "description": "Causae iudicat vitu perata mea ei, cum posse im pedit molestie ne, atqui viris simi lique ei vel. Per te illud an imal, vix ea sint con sul a pella tur iris itegre.",
+    "sku": "003",
+    "tag": "board, surf, suriging",
+    "images": [
+      "/images/product2.png",
+      "/images/product3.png",
+      "/images/product4.png",
+      "/images/product5.png"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Woman’s Wetsuit Pro",
+    "imageURL": "/images/product3.png",
+    "category": "Equipment, Scubadiving",
+    "price": 150,
+    "hasSale": false,
+    "hasDiscount": false,
+    "discountPrice": null,
+    "description": "Causae iudicat vitu perata mea ei, cum posse im pedit molestie ne, atqui viris simi lique ei vel. Per te illud an imal, vix ea sint con sul a pella tur iris itegre.",
+    "sku": "003",
+    "tag": "board, surf, suriging",
+    "images": [
+      "/images/product3.png",
+      "/images/product2.png",
+      "/images/product4.png",
+      "/images/product5.png"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Board Paddle Pair",
+    "imageURL": "/images/product4.png",
+    "category": "Canoenig, Equipment",
+    "price": 100,
+    "hasSale": false,
+    "hasDiscount": false,
+    "discountPrice": null,
+    "description": "Causae iudicat vitu perata mea ei, cum posse im pedit molestie ne, atqui viris simi lique ei vel. Per te illud an imal, vix ea sint con sul a pella tur iris itegre.",
+    "sku": "003",
+    "tag": "board, surf, suriging",
+    "images": [
+      "/images/product4.png",
+      "/images/product1.png",
+      "/images/product3.png",
+      "/images/product5.png"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Kayak With Paddles",
+    "imageURL": "/images/product5.png",
+    "category": "Canoenig, Paddling",
+    "price": 150,
+    "hasSale": false,
+    "hasDiscount": false,
+    "discountPrice": null,
+    "description": "Causae iudicat vitu perata mea ei, cum posse im pedit molestie ne, atqui viris simi lique ei vel. Per te illud an imal, vix ea sint con sul a pella tur iris itegre.",
+    "sku": "003",
+    "tag": "board, surf, suriging",
+    "images": [
+      "/images/product5.png",
+      "/images/product3.png",
+      "/images/product4.png",
+      "/images/product2.png"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "LIGTTWAVE BOARD",
+    "imageURL": "/images/product6.png",
+    "category": "Equipment, Board",
+    "price": 150,
+    "hasSale": false,
+    "hasDiscount": false,
+    "discountPrice": null,
+    "description": "Causae iudicat vitu perata mea ei, cum posse im pedit molestie ne, atqui viris simi lique ei vel. Per te illud an imal, vix ea sint con sul a pella tur iris itegre.",
+    "sku": "003",
+    "tag": "board, surf, suriging",
+    "images": [
+      "/images/product6.png",
+      "/images/product3.png",
+      "/images/product4.png",
+      "/images/product5.png"
+    ]
+  }
+]
