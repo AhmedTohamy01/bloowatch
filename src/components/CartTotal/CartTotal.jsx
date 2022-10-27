@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 /*---> Component <---*/
-export const CartTotal = () => {
+export const CartTotal = ({ total }) => {
   return (
     <CartTotalWrapper>
       <Title>CART TOTAL</Title>
       <RowWrapper>
         <SubTitle>SUBTOTAL</SubTitle>
-        <Data>$130</Data>
+        <Data>${total}</Data>
       </RowWrapper>
       <Divider />
       <RowWrapper>
@@ -20,7 +20,7 @@ export const CartTotal = () => {
       <Divider />
       <RowWrapper>
         <SubTitle>TOTAL</SubTitle>
-        <Data>$130</Data>
+        <Data>${total}</Data>
       </RowWrapper>
       <RowWrapper>
         <CheckoutButton>PROCEED TO CHECKOUT</CheckoutButton>
@@ -102,4 +102,5 @@ const CheckoutButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `
