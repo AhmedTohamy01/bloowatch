@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 import { ShoppingCart } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { MainContext } from '../../context/MainContext'
 
 /*---> Component <---*/
 export const Navbar = () => {
+  const { cartItems } = useContext(MainContext)
+
   return (
     <NavbarWrapper>
       <Link to='/'>
@@ -20,6 +24,11 @@ export const Navbar = () => {
             <CartIcon />
             CART
           </Link>
+          {cartItems.length > 0 && (
+            <Link to='/cart'>
+              <CartItems>{cartItems.length}</CartItems>
+            </Link>
+          )}
         </NavLink>
       </LinksWrapper>
     </NavbarWrapper>
@@ -84,8 +93,9 @@ const NavLink = styled.div`
     margin-right: 30px;
   }
 
-  @media (max-width: 400px) {
-    font-size: 16px;
+  @media (max-width: 580px) {
+    font-size: 14px;
+    margin-right: 20px;
   }
 `
 
@@ -95,4 +105,18 @@ const CartIcon = styled(ShoppingCart)`
   width: 20px;
   height: 20px;
   margin-right: 5px;
+`
+
+const CartItems = styled.div`
+  /* border: 1px solid green; */
+  background: red;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-left: 5px;
 `
