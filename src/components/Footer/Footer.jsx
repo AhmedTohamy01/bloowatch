@@ -49,6 +49,7 @@ const FooterWrapper = styled.div`
   color: white;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 100px;
 
   @media (max-width: 900px) {
     flex-direction: column;
