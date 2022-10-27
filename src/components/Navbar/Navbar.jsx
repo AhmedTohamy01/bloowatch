@@ -62,7 +62,7 @@ const LinksWrapper = styled.div`
   align-items: center;
 `
 
-const NavLink = styled.div`
+const NavLink = styled.p`
   margin-left: 100px;
   font-family: 'OpenSansSemibold';
   font-size: 18px;
@@ -99,7 +99,7 @@ const CartIcon = styled(ShoppingCart)`
   margin-right: 5px;
 `
 
-const CartItems = styled.div`
+const CartItems = styled.p`
   background: red;
   width: 22px;
   height: 22px;

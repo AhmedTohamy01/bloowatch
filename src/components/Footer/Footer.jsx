@@ -31,11 +31,11 @@ export const Footer = () => {
       <InstagramWrapper>
         <Title>INSTAGRAM</Title>
         <ImagesWrapper>
-          <Image src='./images/insta1.png' />
-          <Image src='./images/insta2.png' />
-          <Image src='./images/insta3.png' />
-          <Image src='./images/insta4.png' />
-          <Image src='./images/insta5.png' />
+          <Image src='./images/insta1.png' alt='instagram photo' />
+          <Image src='./images/insta2.png' alt='instagram photo' />
+          <Image src='./images/insta3.png' alt='instagram photo' />
+          <Image src='./images/insta4.png' alt='instagram photo' />
+          <Image src='./images/insta5.png' alt='instagram photo' />
         </ImagesWrapper>
       </InstagramWrapper>
     </FooterWrapper>
@@ -89,12 +89,12 @@ const InstagramWrapper = styled.div`
   }
 `
 
-const Title = styled.div`
+const Title = styled.p`
   font-family: 'OpenSansbold';
   font-size: 14px;
 `
 
-const AboutContent = styled.div`
+const AboutContent = styled.p`
   width: 312px;
   margin-top: 45px;
   font-size: 13px;
@@ -112,7 +112,7 @@ const Line = styled.div`
   margin-bottom: 10px;
 `
 
-const Link = styled.div`
+const Link = styled.p`
   margin-bottom: 10px;
   cursor: pointer;
 `

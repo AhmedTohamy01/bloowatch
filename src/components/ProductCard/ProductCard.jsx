@@ -42,7 +42,7 @@ export const ProductCard = ({
       {hasSale && <SaleStamp>Sale</SaleStamp>}
       <Link to='/product' onClick={handleProductClick}>
         <ImageWrapper>
-          <ProductImage src={imageURL} />
+          <ProductImage src={imageURL} alt='product image'/>
         </ImageWrapper>
       </Link>
       <ProductName>{name}</ProductName>
@@ -83,7 +83,7 @@ const ProductImage = styled.img`
   height: 435px;
 `
 
-const SaleStamp = styled.div`
+const SaleStamp = styled.p`
   width: 70px;
   height: 70px;
   background-color: #0c0eb7;
@@ -100,7 +100,7 @@ const SaleStamp = styled.div`
   line-height: 24px;
 `
 
-const ProductName = styled.div`
+const ProductName = styled.p`
   font-family: 'OpenSansSemibold';
   font-size: 19px;
   line-height: 26px;
@@ -109,7 +109,7 @@ const ProductName = styled.div`
   margin-bottom: 5px;
 `
 
-const Category = styled.div`
+const Category = styled.p`
   font-size: 14px;
   line-height: 19px;
   color: #0c0eb7;
@@ -123,7 +123,7 @@ const PriceWrapper = styled.div`
   align-items: center;
 `
 
-const Price = styled.div`
+const Price = styled.p`
   font-size: 16px;
   line-height: 22px;
   color: white;
@@ -135,7 +135,7 @@ const Price = styled.div`
   align-items: center;
 `
 
-const Discount = styled.div`
+const Discount = styled.p`
   font-size: 16px;
   line-height: 22px;
   width: 91px;

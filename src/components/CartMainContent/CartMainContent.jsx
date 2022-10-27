@@ -41,7 +41,7 @@ export const CartMainContent = () => {
                   setCartItems(newCartItems)
                 }}
               />
-              <ProductImage src={cartItem.item.imageURL} />
+              <ProductImage src={cartItem.item.imageURL} alt='product image'/>
             </IconField>
             <ProductField>{cartItem.item.name}</ProductField>
             <PriceField>${cartItem.item.price}.00</PriceField>
@@ -149,21 +149,21 @@ const IconField = styled.div`
   width: 20%;
 `
 
-const ProductField = styled.div`
+const ProductField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
   width: 30%;
 `
 
-const PriceField = styled.div`
+const PriceField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
   width: 15%;
 `
 
-const QuantityField = styled.div`
+const QuantityField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -172,13 +172,13 @@ const QuantityField = styled.div`
   align-items: center;
 `
 
-const SubtotalField = styled.div`
+const SubtotalField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
 `
 
-const Quantity = styled.div`
+const Quantity = styled.p`
   font-family: 'OpenSansbold';
   font-size: 14px;
   line-height: 19px;
@@ -249,7 +249,7 @@ const MobileIconField = styled.div`
   justify-content: space-between;
 `
 
-const MobileProductField = styled.div`
+const MobileProductField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -259,7 +259,7 @@ const MobileProductField = styled.div`
   flex-wrap: wrap;
 `
 
-const MobilePriceField = styled.div`
+const MobilePriceField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -268,7 +268,7 @@ const MobilePriceField = styled.div`
   justify-content: space-between;
 `
 
-const MobileQuantityField = styled.div`
+const MobileQuantityField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -279,7 +279,7 @@ const MobileQuantityField = styled.div`
   justify-content: space-between;
 `
 
-const MobileQuantity = styled.div`
+const MobileQuantity = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -289,7 +289,7 @@ const MobileQuantity = styled.div`
   justify-content: space-between;
 `
 
-const MobileSubtotalField = styled.div`
+const MobileSubtotalField = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 22px;
@@ -302,7 +302,7 @@ const DeleteIcon = styled(X)`
   cursor: pointer;
 `
 
-const CartEmptyState = styled.div`
+const CartEmptyState = styled.p`
   border: 1px solid red;
   height: 500px;
   display: flex;

@@ -43,7 +43,7 @@ const CartTotalWrapper = styled.div`
   }
 `
 
-const Title = styled.div`
+const Title = styled.p`
   font-family: 'OpenSansbold';
   font-size: 32px;
   line-height: 43px;
@@ -55,7 +55,7 @@ const RowWrapper = styled.div`
   display: flex;
 `
 
-const SubTitle = styled.div`
+const SubTitle = styled.p`
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;
@@ -66,7 +66,7 @@ const SubTitle = styled.div`
   }
 `
 
-const Data = styled.div`
+const Data = styled.p`
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;

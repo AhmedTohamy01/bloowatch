@@ -27,7 +27,7 @@ export const Sidebar = () => {
         <Title>RELATED PRODUCTS</Title>
         <ProductWrapper>
           <ImageWrapper>
-            <Image src='./images/product1.png' />
+            <Image src='./images/product1.png' alt='product image' />
           </ImageWrapper>
           <InfoWrapper>
             <ProductName>TUNDER BOARD</ProductName>
@@ -71,7 +71,7 @@ export const Sidebar = () => {
           </InfoWrapper>
         </ProductWrapper>
       </Section>
-      <SideBarImage src='./images/sidebar.png' />
+      <SideBarImage src='./images/sidebar.png' alt='product image'/>
     </SidebarWrapper>
   )
 }
@@ -91,7 +91,7 @@ const Section = styled.div`
   margin-bottom: 50px;
 `
 
-const Title = styled.div`
+const Title = styled.p`
   font-family: 'OpenSansSemibold';
   font-size: 18px;
   line-height: 24px;
@@ -116,7 +116,7 @@ const PriceFilterWrapper = styled.div`
   height: 100px;
 `
 
-const Category = styled.div`
+const Category = styled.p`
   font-family: 'OpenSansSemibold';
   font-size: 18px;
   line-height: 38px;
@@ -155,7 +155,7 @@ const InfoWrapper = styled.div`
   justify-content: center;
 `
 
-const ProductName = styled.div`
+const ProductName = styled.p`
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;

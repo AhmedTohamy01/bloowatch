@@ -1,8 +1,7 @@
-import { useContext } from 'react'
+import { useState, useContext } from 'react'
 import { MainContext } from '../../context/MainContext'
 import styled from 'styled-components'
 import { ChevronUp, ChevronDown } from 'lucide-react'
-import { useState } from 'react'
 
 /*---> Component <---*/
 export const ProductMainContent = () => {
@@ -19,12 +18,12 @@ export const ProductMainContent = () => {
         <SideImagesWrapper>
           {activeProduct.images.map((image, index) => (
             <SideImageWrapper onClick={() => setMainPhoto(image)} key={index}>
-              <SideImage src={image} />
+              <SideImage src={image} alt='product image' />
             </SideImageWrapper>
           ))}
         </SideImagesWrapper>
         <MainImageWrapper>
-          <MainImage src={mainPhoto} />
+          <MainImage src={mainPhoto} alt='product image' />
         </MainImageWrapper>
       </ProductImagesWrapper>
       <ProductInfoWrapper>
@@ -142,7 +141,7 @@ const SideImage = styled.img`
   height: 115px;
 `
 
-const Name = styled.div`
+const Name = styled.p`
   font-family: 'OpenSansbold';
   font-size: 18px;
   line-height: 24px;
@@ -155,7 +154,7 @@ const PriceWrapper = styled.div`
   margin-bottom: 30px;
 `
 
-const Price = styled.div`
+const Price = styled.p`
   font-size: 16px;
   line-height: 22px;
   color: white;
@@ -167,7 +166,7 @@ const Price = styled.div`
   align-items: center;
 `
 
-const Discount = styled.div`
+const Discount = styled.p`
   font-size: 16px;
   line-height: 22px;
   width: 91px;
@@ -178,7 +177,7 @@ const Discount = styled.div`
   text-decoration: line-through;
 `
 
-const Desciption = styled.div`
+const Desciption = styled.p`
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 30px;
@@ -199,7 +198,7 @@ const ProductQuantityWrapper = styled.div`
   margin-bottom: 80px;
 `
 
-const Quantity = styled.div`
+const Quantity = styled.p`
   font-family: 'OpenSansSemibold';
   font-size: 14px;
   line-height: 19px;
@@ -238,7 +237,7 @@ const CartButton = styled.div`
   cursor: pointer;
 `
 
-const OtherInfo = styled.div`
+const OtherInfo = styled.p`
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 20px;
