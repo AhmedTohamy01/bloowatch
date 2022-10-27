@@ -303,7 +303,6 @@ const DeleteIcon = styled(X)`
 `
 
 const CartEmptyState = styled.p`
-  border: 1px solid red;
   height: 500px;
   display: flex;
   justify-content: center;
