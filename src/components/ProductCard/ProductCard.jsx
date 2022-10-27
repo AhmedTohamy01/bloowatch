@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 /*---> Component <---*/
 export const ProductCard = ({
@@ -13,9 +14,11 @@ export const ProductCard = ({
   return (
     <CardWrapper>
       {hasSale && <SaleStamp>Sale</SaleStamp>}
-      <ImageWrapper>
-        <ProductImage src={imageURL} />
-      </ImageWrapper>
+      <Link to='/product'>
+        <ImageWrapper>
+          <ProductImage src={imageURL} />
+        </ImageWrapper>
+      </Link>
       <ProductName>{name}</ProductName>
       <Category>{category}</Category>
       <PriceWrapper>
