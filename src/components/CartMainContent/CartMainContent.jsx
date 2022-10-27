@@ -1,9 +1,25 @@
 import styled from 'styled-components'
 import { ChevronUp, ChevronDown, X } from 'lucide-react'
 import { CartTotal } from '../CartTotal/CartTotal'
+import { useContext } from 'react'
+import { MainContext } from '../../context/MainContext'
 
 /*---> Component <---*/
 export const CartMainContent = () => {
+  const { cartItems, setCartItems } = useContext(MainContext)
+
+  const getTotal = () => {
+    let total = 0
+    for (let i = 0; i < cartItems.length; i++) {
+      const itemTotal = cartItems[i].quantity * cartItems[i].item.price
+      total += itemTotal
+    }
+    return total
+  }
+
+  if (cartItems.length === 0)
+    return <CartEmptyState>No items available in the cart!</CartEmptyState>
+
   return (
     <MainWrapper>
       <ProductsWrapper>
@@ -15,64 +31,72 @@ export const CartMainContent = () => {
           <SubtotalField>SUBTOTAL</SubtotalField>
         </HeaderWrapper>
         <Divider />
-        <ProductDetailsDesktop>
-          <IconField>
-            <X />
-            <ProductImage src='./images/product1.png' />
-          </IconField>
-          <ProductField>KAYAK WITH PADDLES</ProductField>
-          <PriceField>$130.00</PriceField>
-          <QuantityField>
-            <Quantity>1</Quantity>
-            <Conrtrols>
-              <ArrowIconUp
-              // onClick={() => setQuantity(quantity + 1)}
+        {cartItems.map((cartItem, index) => (
+          <ProductDetailsDesktop key={cartItem.id}>
+            <IconField>
+              <DeleteIcon
+                onClick={() => {
+                  cartItems.splice(index, 1)
+                  const newCartItems = [...cartItems]
+                  setCartItems(newCartItems)
+                }}
               />
-              <ControlsDivider />
-              <ArrowIconDown
-              // onClick={() =>
-              //   quantity > 1 ? setQuantity(quantity - 1) : null
-              // }
+              <ProductImage src={cartItem.item.imageURL} />
+            </IconField>
+            <ProductField>{cartItem.item.name}</ProductField>
+            <PriceField>${cartItem.item.price}.00</PriceField>
+            <QuantityField>
+              <Quantity>{cartItem.quantity}</Quantity>
+              <Conrtrols>
+                <ArrowIconUp />
+                <ControlsDivider />
+                <ArrowIconDown />
+              </Conrtrols>
+            </QuantityField>
+            <SubtotalField>
+              ${cartItem.quantity * cartItem.item.price}.00
+            </SubtotalField>
+          </ProductDetailsDesktop>
+        ))}
+
+        {cartItems.map((cartItem, index) => (
+          <ProductDetailsMobile key={cartItem.id}>
+            <MobileIconField>
+              <DeleteIcon
+                onClick={() => {
+                  cartItems.splice(index, 1)
+                  const newCartItems = [...cartItems]
+                  setCartItems(newCartItems)
+                }}
               />
-            </Conrtrols>
-          </QuantityField>
-          <SubtotalField>$130.00</SubtotalField>
-        </ProductDetailsDesktop>
-        <ProductDetailsMobile>
-          <MobileIconField>
-            <X />
-            <ProductImage src='./images/product1.png' />
-          </MobileIconField>
-          <MobileProductField>
-            <div>Product:</div>
-            <div>KAYAK WITH PADDLES</div>
-          </MobileProductField>
-          <MobilePriceField>
-            <div>Price:</div>
-            <div>$130.00</div>
-          </MobilePriceField>
-          <MobileQuantityField>
-            <MobileQuantity>
-              <div>Quantity:</div>
-              <div>1</div>
-            </MobileQuantity>
-            <Conrtrols>
-              <ArrowIconUp
-              // onClick={() => setQuantity(quantity + 1)}
-              />
-              <ControlsDivider />
-              <ArrowIconDown
-              // onClick={() =>
-              //   quantity > 1 ? setQuantity(quantity - 1) : null
-              // }
-              />
-            </Conrtrols>
-          </MobileQuantityField>
-          <MobileSubtotalField>
-            <div>Subtotal:</div>
-            <div>$130.00</div>
-          </MobileSubtotalField>
-        </ProductDetailsMobile>
+              <ProductImage src={cartItem.item.imageURL} />
+            </MobileIconField>
+            <MobileProductField>
+              <div>Product:</div>
+              <div>{cartItem.item.name}</div>
+            </MobileProductField>
+            <MobilePriceField>
+              <div>Price:</div>
+              <div>${cartItem.item.price}.00</div>
+            </MobilePriceField>
+            <MobileQuantityField>
+              <MobileQuantity>
+                <div>Quantity:</div>
+                <div>{cartItem.quantity}</div>
+              </MobileQuantity>
+              <Conrtrols>
+                <ArrowIconUp />
+                <ControlsDivider />
+                <ArrowIconDown />
+              </Conrtrols>
+            </MobileQuantityField>
+            <MobileSubtotalField>
+              <div>Subtotal:</div>
+              <div>${cartItem.quantity * cartItem.item.price}.00</div>
+            </MobileSubtotalField>
+          </ProductDetailsMobile>
+        ))}
+
         <Divider />
         <ButtonsWrapper>
           <CartButton>APPLY COUPON</CartButton>
@@ -80,7 +104,7 @@ export const CartMainContent = () => {
         </ButtonsWrapper>
       </ProductsWrapper>
       <CartTotalWrapper>
-        <CartTotal />
+        <CartTotal total={getTotal()} />
       </CartTotalWrapper>
     </MainWrapper>
   )
@@ -227,7 +251,7 @@ const CartButton = styled.div`
 const ProductImage = styled.img`
   /* border: 1px solid red; */
   width: 35px;
-  height: 104px;
+  height: auto;
 `
 
 const ProductDetailsMobile = styled.div`
@@ -305,4 +329,19 @@ const MobileSubtotalField = styled.div`
   /* width: 50%; */
   display: flex;
   justify-content: space-between;
+`
+
+const DeleteIcon = styled(X)`
+  cursor: pointer;
+`
+
+const CartEmptyState = styled.div`
+  border: 1px solid red;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #959595;
+  font-family: 'OpenSansSemibold';
 `
