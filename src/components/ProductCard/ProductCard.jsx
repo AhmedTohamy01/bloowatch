@@ -1,20 +1,46 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { MainContext } from '../../context/MainContext'
 
 /*---> Component <---*/
 export const ProductCard = ({
   name,
+  imageURL,
   category,
   price,
-  discountPrice,
   hasSale,
   hasDiscount,
-  imageURL,
+  discountPrice,
+  description,
+  sku,
+  tag,
+  images,
+  id,
 }) => {
+  const { setActiveProduct } = useContext(MainContext)
+
+  const handleProductClick = () => {
+    setActiveProduct({
+      name,
+      imageURL,
+      category,
+      price,
+      hasSale,
+      hasDiscount,
+      discountPrice,
+      description,
+      sku,
+      tag,
+      images,
+      id,
+    })
+  }
+
   return (
     <CardWrapper>
       {hasSale && <SaleStamp>Sale</SaleStamp>}
-      <Link to='/product'>
+      <Link to='/product' onClick={handleProductClick}>
         <ImageWrapper>
           <ProductImage src={imageURL} />
         </ImageWrapper>
@@ -22,7 +48,7 @@ export const ProductCard = ({
       <ProductName>{name}</ProductName>
       <Category>{category}</Category>
       <PriceWrapper>
-        <Price>{price}</Price>
+        <Price>${price}.00</Price>
         {hasDiscount && <Discount>{discountPrice}</Discount>}
       </PriceWrapper>
     </CardWrapper>
