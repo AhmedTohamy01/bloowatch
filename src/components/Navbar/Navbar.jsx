@@ -1,21 +1,26 @@
 import styled from 'styled-components'
 import { ShoppingCart } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 /*---> Component <---*/
 export const Navbar = () => {
   return (
     <NavbarWrapper>
-      <LogoWrapper>
-        <Logo alt='BlooWatch logo' src='./images/logo.png' />
-      </LogoWrapper>
+      <Link to='/'>
+        <LogoWrapper>
+          <Logo alt='BlooWatch logo' src='./images/logo.png' />
+        </LogoWrapper>
+      </Link>
       <LinksWrapper>
-        <Link>SHOP</Link>
-        <Link>BLOG</Link>
-        <Link>SEARCH</Link>
-        <Link>
-          <CartIcon />
-          CART
-        </Link>
+        <NavLink>SHOP</NavLink>
+        <NavLink>BLOG</NavLink>
+        <NavLink>SEARCH</NavLink>
+        <NavLink>
+          <Link to='/cart'>
+            <CartIcon />
+            CART
+          </Link>
+        </NavLink>
       </LinksWrapper>
     </NavbarWrapper>
   )
@@ -54,7 +59,7 @@ const LinksWrapper = styled.div`
   align-items: center;
 `
 
-const Link = styled.div`
+const NavLink = styled.div`
   /* border: 1px solid yellow; */
   margin-left: 100px;
   font-family: 'OpenSansSemibold';
@@ -63,6 +68,12 @@ const Link = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  a:link,
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
 
   @media (max-width: 990px) {
     margin-left: 50px;
