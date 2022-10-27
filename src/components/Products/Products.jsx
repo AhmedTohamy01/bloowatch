@@ -10,12 +10,17 @@ export const Proudcts = () => {
         <ProductCard
           key={product.id}
           name={product.name}
+          imageURL={product.imageURL}
           category={product.category}
           price={product.price}
-          discountPrice={product.discountPrice}
           hasSale={product.hasSale}
           hasDiscount={product.hasDiscount}
-          imageURL={product.image}
+          discountPrice={product.discountPrice}
+          description={product.description}
+          sku={product.sku}
+          tag={product.tag}
+          images={product.images}
+          id={product.id}
         />
       ))}
     </ProductsWrapper>
