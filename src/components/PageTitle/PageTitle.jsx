@@ -23,5 +23,6 @@ const Wrapper = styled.p`
 
   @media (max-width: 720px) {
     padding: 40px;
+    font-size: 20px;
   }
 `
